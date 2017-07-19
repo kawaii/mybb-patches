@@ -1,0 +1,54 @@
+<element>
+<key>inc/functions_post.php</key>
+<value>
+<array>
+<element>
+<key type="INT">0</key>
+<value>
+<array>
+<element>
+<key>ptitle</key>
+<value>Quote Disable OP</value>
+</element>
+<element>
+<key>pdescription</key>
+<value>
+Patches functions_post.php to disable the quote button from OPs longer than X characters.
+</value>
+</element>
+<element>
+<key>psearch</key>
+<value>
+<![CDATA[
+if($forumpermissions['canviewdeletionnotice'] == 1 && $post['visible'] == -1 && $post_type == 0 && !is_moderator($fid, "canviewdeleted"))
+]]>
+</value>
+</element>
+<element>
+<key>pbefore</key>
+<value>
+if($thread['firstpost'] == $post['pid']){ if (my_strlen($post['message']) > 1024 ) { $post['button_quote'] = ''; } }
+</value>
+</element>
+<element>
+<key>pafter</key>
+<value/>
+</element>
+<element>
+<key>preplace</key>
+<value type="BOOL"/>
+</element>
+<element>
+<key>pmulti</key>
+<value type="BOOL"/>
+</element>
+<element>
+<key>pnone</key>
+<value type="BOOL"/>
+</element>
+</array>
+</value>
+</element>
+</array>
+</value>
+</element>
