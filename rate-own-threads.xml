@@ -1,0 +1,48 @@
+<element>
+<key>ratethread.php</key>
+<value>
+<array>
+<element>
+<key type="INT">0</key>
+<value>
+<array>
+<element>
+<key>ptitle</key>
+<value>Rate Own Threads</value>
+</element>
+<element>
+<key>pdescription</key>
+<value>Allows users to rate their own forum threads.</value>
+</element>
+<element>
+<key>psearch</key>
+<value>
+if($thread['uid'] == $mybb->user['uid']) { error($lang->error_cannotrateownthread); }
+</value>
+</element>
+<element>
+<key>pbefore</key>
+<value/>
+</element>
+<element>
+<key>pafter</key>
+<value/>
+</element>
+<element>
+<key>preplace</key>
+<value type="BOOL">1</value>
+</element>
+<element>
+<key>pmulti</key>
+<value type="BOOL"/>
+</element>
+<element>
+<key>pnone</key>
+<value type="BOOL"/>
+</element>
+</array>
+</value>
+</element>
+</array>
+</value>
+</element>
